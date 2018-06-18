@@ -31,6 +31,8 @@ pushd $vendor_dir
   mv $JRE_DIR jre
 popd
 
+/home/vcap/app/vendor/jre/bin/keytool -import -trustcacerts -keystore /home/vcap/app/vendor/jre/lib/security/cacerts -storepass changeit -noprompt -alias cfcert -file /etc/ssl/certs/ca-certificates.crt
+
 status "Repacking jenkins.war."
 pushd $build_dir
   zip -q -r jenkins.war * -x "vendor/*"
