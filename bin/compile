@@ -45,5 +45,21 @@ mkdir -p $build_dir/.profile.d
 echo "export PATH=\"\$HOME/vendor/jre/bin:\$HOME/bin:\$PATH\";" > $build_dir/.profile.d/jre.sh
 
 $vendor_dir/jre/bin/keytool -import -trustcacerts -keystore $vendor_dir/jre/lib/security/cacerts -storepass changeit -noprompt -alias cfcert -file /etc/ssl/certs/ca-certificates.crt
+$vendor_dir/jre/bin/keytool -import -trustcacerts -keystore $vendor_dir/jre/lib/security/cacerts -storepass changeit -noprompt -alias cfcert1 -file /usr/local/share/ca-certificates/trusted_ca_1.crt
+$vendor_dir/jre/bin/keytool -import -trustcacerts -keystore $vendor_dir/jre/lib/security/cacerts -storepass changeit -noprompt -alias cfcert2 -file /usr/local/share/ca-certificates/trusted_ca_2.crt
+$vendor_dir/jre/bin/keytool -import -trustcacerts -keystore $vendor_dir/jre/lib/security/cacerts -storepass changeit -noprompt -alias cfcert3 -file /usr/local/share/ca-certificates/trusted_ca_3.crt
+$vendor_dir/jre/bin/keytool -import -trustcacerts -keystore $vendor_dir/jre/lib/security/cacerts -storepass changeit -noprompt -alias cfcert4 -file /usr/local/share/ca-certificates/trusted_ca_4.crt
+$vendor_dir/jre/bin/keytool -import -trustcacerts -keystore $vendor_dir/jre/lib/security/cacerts -storepass changeit -noprompt -alias cfcert5 -file /usr/local/share/ca-certificates/trusted_ca_5.crt
+$vendor_dir/jre/bin/keytool -import -trustcacerts -keystore $vendor_dir/jre/lib/security/cacerts -storepass changeit -noprompt -alias cfcert6 -file /usr/local/share/ca-certificates/trusted_ca_6.crt
+$vendor_dir/jre/bin/keytool -import -trustcacerts -keystore $vendor_dir/jre/lib/security/cacerts -storepass changeit -noprompt -alias cfcert7 -file /usr/local/share/ca-certificates/trusted_ca_7.crt
+$vendor_dir/jre/bin/keytool -import -trustcacerts -keystore $vendor_dir/jre/lib/security/cacerts -storepass changeit -noprompt -alias cfcert8 -file /usr/local/share/ca-certificates/trusted_ca_8.crt
+$vendor_dir/jre/bin/keytool -import -trustcacerts -keystore $vendor_dir/jre/lib/security/cacerts -storepass changeit -noprompt -alias cfcert9 -file /usr/local/share/ca-certificates/trusted_ca_9.crt
+$vendor_dir/jre/bin/keytool -import -trustcacerts -keystore $vendor_dir/jre/lib/security/cacerts -storepass changeit -noprompt -alias cfcert10 -file /usr/local/share/ca-certificates/trusted_ca_10.crt
+$vendor_dir/jre/bin/keytool -import -trustcacerts -keystore $vendor_dir/jre/lib/security/cacerts -storepass changeit -noprompt -alias cfcert11 -file /usr/local/share/ca-certificates/trusted_ca_11.crt
+$vendor_dir/jre/bin/keytool -import -trustcacerts -keystore $vendor_dir/jre/lib/security/cacerts -storepass changeit -noprompt -alias cfcert12 -file /usr/local/share/ca-certificates/trusted_ca_12.crt
+$vendor_dir/jre/bin/keytool -import -trustcacerts -keystore $vendor_dir/jre/lib/security/cacerts -storepass changeit -noprompt -alias cfcert13 -file /usr/local/share/ca-certificates/trusted_ca_13.crt
+$vendor_dir/jre/bin/keytool -import -trustcacerts -keystore $vendor_dir/jre/lib/security/cacerts -storepass changeit -noprompt -alias cfcert14 -file /usr/local/share/ca-certificates/trusted_ca_14.crt
+$vendor_dir/jre/bin/keytool -import -trustcacerts -keystore $vendor_dir/jre/lib/security/cacerts -storepass changeit -noprompt -alias cfcert15 -file /usr/local/share/ca-certificates/trusted_ca_15.crt
+$vendor_dir/jre/bin/keytool -import -trustcacerts -keystore $vendor_dir/jre/lib/security/cacerts -storepass changeit -noprompt -alias cfcert16 -file /usr/local/share/ca-certificates/trusted_ca_16.crt
 
 status "Done."
