@@ -31,8 +31,6 @@ pushd $vendor_dir
   mv $JRE_DIR jre
 popd
 
-/home/vcap/app/vendor/jre/bin/keytool -import -trustcacerts -keystore /home/vcap/app/vendor/jre/lib/security/cacerts -storepass changeit -noprompt -alias cfcert -file /etc/ssl/certs/ca-certificates.crt
-
 status "Repacking jenkins.war."
 pushd $build_dir
   zip -q -r jenkins.war * -x "vendor/*"
@@ -45,5 +43,7 @@ status "Building runtime environment."
 mkdir -p $build_dir/.profile.d
 # $HOME is set here https://github.com/cloudfoundry/dea_ng/blob/c2217e5fbcb866c9f4b6fd248b39138a83cbb479/lib/dea/starting/env.rb#L15
 echo "export PATH=\"\$HOME/vendor/jre/bin:\$HOME/bin:\$PATH\";" > $build_dir/.profile.d/jre.sh
+
+$JRE_DIR/bin/keytool -import -trustcacerts -keystore $JRE_DIR/lib/security/cacerts -storepass changeit -noprompt -alias cfcert -file /etc/ssl/certs/ca-certificates.crt
 
 status "Done."
