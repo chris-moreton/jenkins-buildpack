@@ -4,5 +4,5 @@ cat << EOF
 addons: []
 config_vars: []
 default_process_types:
-  web: java -jar jenkins.war --httpPort=\$PORT
+  web: java -jar jenkins.war --httpPort=\$PORT -Djavax.net.ssl.keyStore=/home/vcap/app/jre/lib/security/cacert
 EOF
